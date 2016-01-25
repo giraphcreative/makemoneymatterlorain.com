@@ -35,39 +35,10 @@ header {
 	position: relative;
 	background: $orange url(../img/bg-header.jpg) top center repeat-x;
 	background-size: cover;
-	text-align: center;
+	text-align: left;
 
-	img {
-		display: block;
-	}
-	
-	.wrap {
-		height: 300px;
-
-		.icon {
-			margin-left: 30px;
-		}
-
-		.header {
-			background-color: white;
-			border: 8px solid $teal;
-			box-shadow: 5px 5px 15px rgba( 0, 0, 0, .5 );
-			width: 220px;
-			position: absolute;
-			bottom: -20px;
-			left: 50%;
-			margin-left: -110px;
-
-			@include respond-to( 600px ) {
-				left: 30px;
-				margin-left: 0;
-				width: 300px;
-			}
-		}
-
-		@include respond-to( 600px ) {
-			height: 400px;
-		}
+	@include respond-to( 600px ) {
+		padding: 120px 0 20px 20px;
 	}
 }
 
