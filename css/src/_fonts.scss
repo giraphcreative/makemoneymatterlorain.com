@@ -3,28 +3,47 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic);
 
 
-// sans-serif mixin
+@font-face {
+	font-family: 'Bebas Neue Book';
+	src: url('fonts/bebas-neue-book.eot');
+	src: local('☺'), url('fonts/bebas-neue-book.woff') format('woff'), url('fonts/bebas-neue-book.ttf') format('truetype'), url('fonts/bebas-neue-book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Bebas Neue Bold';
+	src: url('fonts/bebas-neue-bold.eot');
+	src: local('☺'), url('fonts/bebas-neue-bold.woff') format('woff'), url('fonts/bebas-neue-bold.ttf') format('truetype'), url('fonts/bebas-neue-bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// main body font
 @mixin font-title {
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-weight: 400;
+}
+
+
+// main body font
+@mixin font {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
 }
 
 
-// sans-serif mixin
-@mixin font-title-light {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
+// bold font
+@mixin font-bold {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
 }
 
 
-// sans-serif mixin
-@mixin font {
+// fine-print face
+@mixin font-fine {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
-}
-
-
-// bold face
-@mixin font-bold {
-	font-weight: 700;
 }

@@ -3,7 +3,7 @@ body {
 	@include font;
 	font-size: 85%;
 	line-height: 1.5em;
-	color: $blue;
+	color: $grey;
 	background-color: #eee;
 	
 	@include respond-to( 1024px ) {
@@ -12,12 +12,12 @@ body {
 }
 
 a {
-	color: $blue;
+	color: $orange;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:hover {
-		color: lighten( $blue, 10% );
+		color: lighten( $orange, 10% );
 	}
 }
 

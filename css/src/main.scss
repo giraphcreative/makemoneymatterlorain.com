@@ -1,13 +1,10 @@
 
 
 // color variables
-$grey: #414042;
-$blue: #0569B2;
-$blue-dark: #214099;
-$teal: #27AAE1;
-$green: #66BD5A;
-$lime: #8DC63F;
-$yellow: #FFF200;
+$grey: #636464;
+$grey-light: #DEE0E0;
+$teal: #057270;
+$orange: #C74B27;
 
 
 @import "reset";
@@ -36,7 +33,7 @@ $yellow: #FFF200;
 // header styles
 header {
 	position: relative;
-	background: $blue url(../img/bg-header.jpg) top center repeat-x;
+	background: $orange url(../img/bg-header.jpg) top center repeat-x;
 	background-size: cover;
 	text-align: center;
 
@@ -53,7 +50,7 @@ header {
 
 		.header {
 			background-color: white;
-			border: 8px solid $blue;
+			border: 8px solid $teal;
 			box-shadow: 5px 5px 15px rgba( 0, 0, 0, .5 );
 			width: 220px;
 			position: absolute;
@@ -85,26 +82,9 @@ header {
 
 
 
-// top border
-.top-border {
-	background: $lime url(../img/bg-overlay.png) top center no-repeat;
-	background-size: cover;
-	height: 35px;
-
-	@include respond-to( 600px ) {
-		height: 45px;
-	}
-
-	@include respond-to( 900px ) {
-		height: 55px;
-	}
-}
-
-
-
 // main content container
 .main {
-	background: $blue url(../img/bg-overlay.png) top center repeat-y;
+	background: $grey-light url(../img/bg-overlay.png) top center repeat-y;
 	background-size: contain;
 }
 
@@ -130,26 +110,24 @@ header {
 		}
 	}
 	
-	@include font-title-light;
-	font-size: 1.6em;
-	line-height: 1.7em;
+	@include font;
+	font-size: 1.8em;
+	line-height: 1.5em;
 }
 
 
 
 // colors
-.bg-blue { background: $blue; }
-.bg-blue-dark { background: $blue-dark; }
+.bg-orange { background: $orange; }
 .bg-teal { background: $teal; }
-.bg-green { background: $green; }
-.bg-lime { background: $lime; }
+.bg-grey { background: $grey; }
 
 
 
 // tool styles
 .tool {
 	padding: 0;
-	color: white;
+	color: $grey;
 	
 	@include respond-to( 768px ) {
 		padding: 20px 40px;
@@ -158,6 +136,7 @@ header {
 	.calculator {
 		padding: 10px 15px 10px;
 		@include font-title;
+		color: white;
 
 		button, input[type=submit], .btn {
 			width: 100%;
@@ -189,7 +168,7 @@ header {
 	h2 {
 		@include font;
 		font-size: 1.8em;
-		color: $yellow;
+		color: $teal;
 
 		@include respond-to( 768px ) {
 			font-size: 3em;
@@ -214,10 +193,10 @@ header {
 
 // button styles
 input[type=submit], button, .btn {
-	@include font-title;
+	@include font-bold;
 	padding: 15px;
-	background: $lime;
-	color: $blue-dark;
+	background: $orange;
+	color: white;
 	border: 0;
 	border-radius: 10px;
 	font-size: 2em;
@@ -297,6 +276,7 @@ input[type=submit], button, .btn {
 .fine-print {
 	background: white;
 	padding: 0 20px;
+	@include font-fine;
 	font-size: .8em;
 	line-height: 1.3em;
 	text-align: left;
