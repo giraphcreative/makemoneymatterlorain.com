@@ -9,6 +9,7 @@ $(function(){
 			if ( total>0 ) {
 				$(".result.total").html(""+total.toFixed(2));
 			}
+			ga('send', 'event', 'Calculate', 'click', 'Calculate');
 		};
 
 	$(".calculator.home").accrue({
